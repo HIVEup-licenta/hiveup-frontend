@@ -1,14 +1,12 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import "./FooterStyle.css"
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer style={{ backgroundColor: '#fcba03', padding: '1rem' }}>
-      <Container>
+    <footer className="footer" style={{ backgroundColor: '#fcba03', padding: '1rem' }}>
+      <div>
         <p style={{ textAlign: 'left' }}>Contact us</p>
-      </Container>
+      </div>
     </footer>
   );
-};
-
-export default Footer;
+}
