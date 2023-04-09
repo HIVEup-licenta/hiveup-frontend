@@ -44,12 +44,12 @@
   align-items: center;
   color: #fcba03;
   gap: 3px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .a {
-  width: 103px;
-  height: 19px;
+  width: 140px;
+  height: 20px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -59,18 +59,21 @@
   font-style: normal;
   line-height: 120%;
   letter-spacing: 0.01em;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
   font-weight: 400;
   text-decoration:none;
 }
 
 .nav-icon {
-	color: "#fcba03"; 
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+	color: #fcba03; 
 	padding-right: 5px;
 }
 
-a:link {
+/* a:link {
 	text-decoration: none;
 }
 
@@ -81,8 +84,9 @@ a:visited {
 a:hover {
 	text-decoration: none;
 }
+*/
 
-a:active {
+a.site-title:active {
 	text-decoration: none;
 	color: black;
-}
+} 

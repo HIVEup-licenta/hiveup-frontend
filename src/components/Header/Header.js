@@ -7,15 +7,15 @@ export default function Header() {
   // const [navVisible, showNavbar] = useState(false);
   return (
     <div className="header">
-      <span className="site-title">
+      <div className="site-title">
         <NavLink to="/">
           <HiveIcon />
           HIVEup
         </NavLink>
-      </span>
-      <span className="log-out-btn">
+      </div>
+      <div className="log-out-btn">
         <NavLink>Log out</NavLink>
-      </span>
+      </div>
     </div>
   );
 }
