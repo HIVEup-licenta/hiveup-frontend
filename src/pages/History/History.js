@@ -1,10 +1,13 @@
 import React from "react";
 import DashboardLayout from "../../components/DashboardLayout/DashboardLayout";
+import "./HistoryStyle.css";
 
 export default function History() {
   return (
     <DashboardLayout>
-      <h1>History</h1>
+      <div>
+        <h1>History</h1>
+      </div>
     </DashboardLayout>
   );
 }

@@ -1,31 +1,28 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import HiveIcon from '@mui/icons-material/Hive';
-import React, {useState} from 'react';
+import { NavLink} from "react-router-dom";
+import HiveIcon from "@mui/icons-material/Hive";
+import React from "react";
 import "./HeaderStyle.css";
 
-
 export default function Header() {
-  const [navVisible, showNavbar] = useState(false);
+  // const [navVisible, showNavbar] = useState(false);
   return (
-    <div className="nav">
-    <Link to="/" className="site-title">
-        <HiveIcon />
-        HIVEup
-    </Link>
-    
-    {/* <ul>
-        <CustomLink to="/myprofile">MyProfile</CustomLink>
-        <CustomLink to="/myprofile">MyFeed</CustomLink>
-        <CustomLink to="/history">History</CustomLink>
-    </ul> */}
-   </div>
+    <div className="header">
+      <span className="site-title">
+        <NavLink to="/">
+          <HiveIcon />
+          HIVEup
+        </NavLink>
+      </span>
+      <span className="log-out-btn">
+        <NavLink>Log out</NavLink>
+      </span>
+    </div>
   );
 }
 
 // function CustomLink({ to, children, ...props }) {
 //   const resolvedPath = useResolvedPath(to)
 //   const isActive = useMatch({ path: resolvedPath.pathname, end: true })
-
 //   return (
 //     <li className={isActive ? "active" : ""}>
 //       <Link to={to} {...props}>

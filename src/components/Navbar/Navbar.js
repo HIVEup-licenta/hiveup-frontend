@@ -1,35 +1,43 @@
-import React from 'react';
+import React from "react";
 import { NavLink } from "react-router-dom";
+import FeedIcon from "@mui/icons-material/Feed";
+import EventNoteIcon from "@mui/icons-material/EventNote";
+import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import "./NavbarStyle.css";
 
 export default function Navbar() {
+  return (
+    <>
+      <div className="side-navigation">
+        <div className="nav-links">
+          <div className="nav-items">
+            <span className="nav-item">
+              <EventNoteIcon
+			  className="nav-icon"
+              />
+              <NavLink to="/">
+                <span className="nav-text">My Feed</span>
+              </NavLink>
+            </span>
 
-	return (
-		<>
-          <div className="side-navigation">
-			<div className="nav-links">
-				<span>
-				<NavLink to="/">
-					<span>My Feed</span>
-				</NavLink>
-				</span>
+            <span className="nav-item">
+              <AccountBoxIcon
+			  className="nav-icon"
+              />
+              <NavLink to="/myprofile">
+                <span className="nav-text">My Profile</span>
+              </NavLink>
+            </span>
 
-				<span>
-				<NavLink to="/myprofile">
-					<span>My Profile</span>
-				</NavLink>
-				</span>
-
-				<span>
-				<NavLink to="/history">
-					<span>History</span>
-				</NavLink>
-				</span>
-
-			</div>
+            <span className="nav-item">
+              <FeedIcon className="nav-icon" />
+              <NavLink to="/history">
+                <span className="nav-text">History</span>
+              </NavLink>
+            </span>
           </div>
-		</>
+        </div>
+      </div>
+    </>
   );
 }
-
-// export default Navbar;
