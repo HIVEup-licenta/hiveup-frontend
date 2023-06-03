@@ -1,0 +1,70 @@
+.register-bkgWrapper {
+    background-color: #e8e7e3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    min-height: 40rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    margin: 0 auto;
+    background-color: white;
+  }
+  
+  .register-title {
+    margin-top: 20px;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+  
+  .registerContainer {
+    margin-bottom: 2rem;
+  }
+  
+  .register-form {
+    width: 30rem;
+  }
+  
+  .register-fieldWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .register-label {
+    margin-right: 1rem;
+    width: 6rem;
+  }
+  
+  .register-input {
+    flex: 1;
+  }
+  
+  /* .error {
+    margin-bottom: 2rem;
+  } */
+  
+  .submitButton {
+    margin-bottom: 2rem;
+  }
+  
+  .buttons {
+    display: flex;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }

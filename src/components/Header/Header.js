@@ -1,5 +1,6 @@
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import HiveIcon from "@mui/icons-material/Hive";
+import LogoutIcon from "@mui/icons-material/Logout";
 import React from "react";
 import "./HeaderStyle.css";
 
@@ -7,15 +8,18 @@ export default function Header() {
   // const [navVisible, showNavbar] = useState(false);
   return (
     <div className="header">
-      <div className="site-title">
+      <span className="site-title">
+        <HiveIcon className="site-title-icon" />
         <NavLink to="/">
-          <HiveIcon />
-          HIVEup
+          <span className="site-title-text">HIVEup</span>
         </NavLink>
-      </div>
-      <div className="log-out-btn">
-        <NavLink>Log out</NavLink>
-      </div>
+      </span>
+      <span className="log-out-btn">
+        <LogoutIcon className="log-out-icon" />
+        <NavLink>
+          <span className="log-out-btn">Log out</span>
+        </NavLink>
+      </span>
     </div>
   );
 }

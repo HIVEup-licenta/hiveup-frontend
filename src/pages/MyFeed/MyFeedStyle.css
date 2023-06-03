@@ -1,4 +1,4 @@
-.history {
+.my-feed {
     position: fixed;
     display: flex;
     justify-content: center;
@@ -11,7 +11,7 @@
     /* box-shadow: 5px 10px 8px 10px #dedcd9; */
   }
   
-  .history-title {
+  .my-feed-title {
     display: flex;
     justify-content: row;
     align-items: center;

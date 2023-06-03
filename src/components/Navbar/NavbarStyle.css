@@ -1,15 +1,18 @@
 .side-navigation {
-  position: absolute;
+  position: sticky;
   top: 50px;
   bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 180px;
-  height: auto;
-  background-color: #fadea2;
+  height: calc(100vh - 100px);
+  background-color: #fcba03;;
   box-shadow: 10px 0px 5px #dedcd9;
   color: #fcba03;
+  z-index: 100;
+  /* padding-right: 100px; */
+  
 }
 
 .nav-links {
@@ -34,6 +37,8 @@
   padding: 10px;
   color: #fcba03;
   gap: 15px;
+  opacity: 1 !important;
+  z-index: 1000;
 }
 
 .nav-item {
@@ -45,35 +50,70 @@
   color: #fcba03;
   gap: 3px;
   padding: 20px;
-}
-
-.a {
-  width: 140px;
-  height: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   text-decoration: none;
-  color: #fcba03;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   line-height: 120%;
   letter-spacing: 0.01em;
-  font-size: 30px;
+  font-size: 20px;
   cursor: pointer;
-  font-weight: 400;
-  text-decoration:none;
+  font-weight: 200;
+  opacity: 1;
+}
+
+.nav-text {
+  width: 175px;
+  height: 56px;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  text-decoration: none;
+  /* color: #fcba03; */
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 200;
 }
 
 .nav-icon {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-	color: #fcba03; 
-	padding-right: 5px;
+  flex-direction: center;
+  align-items: center;
+	color: white; 
+  font-size: 150% !important;
+  margin-right: 10px;
 }
 
-/* a:link {
+.nav-art{
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 400%;
+  height: 200%;
+  background-image:url(hive2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  opacity: 0.3;
+ 
+}
+
+/* a:active { 
+	color: black; 
+}
+
+a:link {
 	text-decoration: none;
 }
 
@@ -81,12 +121,8 @@ a:visited {
 	text-decoration: none;
 }
 
+
 a:hover {
 	text-decoration: none;
-}
-*/
-
-a.site-title:active {
-	text-decoration: none;
-	color: black;
-} 
+  color: black; 
+} */
