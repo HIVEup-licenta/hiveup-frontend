@@ -99,7 +99,6 @@
 }
 
 .login-register{
-  padding-left: 30px;
   width: 100%;
   align-items: center;
   display: flex;
@@ -112,15 +111,14 @@
   line-height: 1.5;
 }
 .login-register-text {
-  width: 80px;
-  align-items: center;
+  width: 200px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .login-register-btn {
-  width: 140px;
-  /* align-items: center; */
+  width: 60px;
   display: flex;
   flex-direction: column;
   color:  #000080;

@@ -1,13 +1,12 @@
 .my-profile {
-  position: fixed;
   display: flex;
   justify-content: center;
   background-color: #e8e7e3;
   /* width: 1680px; */
   width: 85%;
-  height: 80%;
-  padding: 20px 20px 20px 20px;
-  margin: 20px 10px 80px 20px;
+  height: 100vh;
+  padding: 50px 20px 20px 20px;
+  margin: 50px 10px 80px 20px;
   /* box-shadow: 5px 10px 8px 10px #dedcd9; */
 }
 

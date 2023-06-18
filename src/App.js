@@ -5,6 +5,7 @@ import History from "./pages/History/History";
 import MyProfile from "./pages/MyProfile/MyProfile";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
+import NewPost from "./pages/NewPost/NewPost";
 import DashboardLayout from "./components/DashboardLayout/DashboardLayout"
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -17,6 +18,7 @@ import {
   APP_MYFEED_URL,
   APP_PROFILE_URL,
   APP_HOSTORY_URL,
+  APP_NEWPOST_URL,
 } from "./pages/shared/constants";
 
 import "./index.css";
@@ -40,6 +42,10 @@ export const router = createBrowserRouter([
       {
         path: APP_HOSTORY_URL,
         element: <History />,
+      },
+      {
+        path: APP_NEWPOST_URL,
+        element: <NewPost />,
       },
     ],
   },

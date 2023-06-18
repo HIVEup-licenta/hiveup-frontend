@@ -5,17 +5,21 @@ import { useDispatch, useSelector } from "react-redux";
 import { useAuth } from "../../firebaseFunctions/auth";
 import { APP_PROTECTED_URL } from "../../pages/shared/constants";
 import { Link } from "react-router-dom";
+import ProfilePicture from "../../components/ProfilePicture/ProfilePicture";
 import "./MyProfileStyle.css";
+import { useUser } from "../../firebaseFunctions/users";
 
 export default function MyProfile() {
-  const { user, isLoading } = useAuth();
-  if (isLoading) return "Loading...";
+  const { user: authUser, isLoading: authLoading } = useAuth();
+  // const { user, isLoading } = useUser(uid);
+  if (authLoading) return "Loading...";
 
   return (
     // <DashboardLayout>
     <div className="my-profile">
       <div className="my-profile-container">
-        <div className="my-profile-title">My Profile</div>
+        {/* <div className="my-profile-title">My Profile</div> */}
+        {/* <ProfilePicture user={user} size="md" /> */}
         <form className="my-profile-form">
           <div className="my-profile-buttons">
             <button className="my-profile-edit-button">Edit</button>
@@ -26,10 +30,10 @@ export default function MyProfile() {
             <div className="my-profile-column1">
               <div className="my-profile-row">
                 <label className="my-profile-label">First Name</label>
-                {user && (
+                {authUser && (
                   <input
                     className="my-profile-input"
-                    value={user.fName}
+                    value={authUser.fName}
                     readOnly
                   />
                 )}
@@ -37,10 +41,10 @@ export default function MyProfile() {
 
               <div className="my-profile-row">
                 <label className="my-profile-label">Last Name</label>
-                {user && (
+                {authUser && (
                   <input
                     className="my-profile-input"
-                    value={user.lName}
+                    value={authUser.lName}
                     readOnly
                   />
                 )}
@@ -48,10 +52,10 @@ export default function MyProfile() {
 
               <div className="my-profile-row">
                 <label className="my-profile-label">Email</label>
-                {user && (
+                {authUser && (
                   <input
                     className="my-profile-input"
-                    value={user.email}
+                    value={authUser.email}
                     readOnly
                   />
                 )}
@@ -59,10 +63,10 @@ export default function MyProfile() {
 
               <div className="my-profile-row">
                 <label className="my-profile-label">Phone Number</label>
-                {user && (
+                {authUser && (
                   <input
                     className="my-profile-input"
-                    value={user.phoneNr}
+                    value={authUser.phoneNr}
                     readOnly
                   />
                 )}
@@ -70,10 +74,10 @@ export default function MyProfile() {
 
               <div className="my-profile-row">
                 <label className="my-profile-label">Country</label>
-                {user && (
+                {authUser && (
                   <input
                     className="my-profile-input"
-                    value={user.country}
+                    value={authUser.country}
                     readOnly
                   />
                 )}
@@ -81,10 +85,10 @@ export default function MyProfile() {
 
               <div className="my-profile-row">
                 <label className="my-profile-label">City</label>
-                {user && (
+                {authUser && (
                   <input
                     className="my-profile-input"
-                    value={user.city}
+                    value={authUser.city}
                     readOnly
                   />
                 )}

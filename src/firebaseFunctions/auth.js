@@ -131,7 +131,7 @@ export function useRegister() {
           country: country,
           city: city,
           // username: username.toLowerCase(),
-          // avatar: "",
+          avatar: "",
           date: Date.now(),
         });
 
