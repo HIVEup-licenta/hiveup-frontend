@@ -4,12 +4,12 @@ import "./MyFeedStyle.css";
 
 export default function MyFeed() {
   return (
-    <DashboardLayout>
+    // <DashboardLayout>
       <div className="my-feed">
         <div className="my-feed-container">
-          <div className="my-feed-title">My Profile</div>
+          <div className="my-feed-title">My feed</div>
         </div>
       </div>
-    </DashboardLayout>
+    // </DashboardLayout>
   );
 }

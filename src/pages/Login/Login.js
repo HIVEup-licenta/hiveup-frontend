@@ -1,4 +1,5 @@
 import { Suspense, lazy } from "react";
+import React from 'react';
 
 const LoginLazy = lazy(() => import("./LoginPage"));
 
@@ -9,5 +10,3 @@ export default function Login() {
   </Suspense>
   );
 };
-
-// export default Login;
