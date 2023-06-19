@@ -11,6 +11,7 @@
   box-shadow: 10px 0px 5px #dedcd9;
   color: #fcba03;
   z-index: 100;
+  position: fixed;
   /* padding-right: 100px; */
   
 }

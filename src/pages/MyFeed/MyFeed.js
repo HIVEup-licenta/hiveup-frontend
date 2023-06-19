@@ -1,6 +1,5 @@
 import React from "react";
 import "./MyFeedStyle.css";
-import PostList from "./Posts/PostsList";
 import AddBoxIcon from "@mui/icons-material/AddBox";
 import { Textarea } from "@chakra-ui/react";
 import { useAuth } from "../../firebaseFunctions/auth";

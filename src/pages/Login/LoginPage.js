@@ -18,14 +18,6 @@ import { Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import "./Login.css";
 
-// const getSchema = () =>
-//   Yup.object().shape({
-//     email: Yup.string()
-//       .email("Email invalid")
-//       .max(50, "Cel mult 50 de caractere")
-//       .required("Required"),
-//     password: Yup.string().required("Required").min(3, "Cel putin 3 caractere"),
-//   });
 
 export const emailValidate = {
   required: {
@@ -60,7 +52,7 @@ export default function Login() {
   } = useForm();
 
   async function handleLogin(data) {
-    console.log(data);
+    // console.log(data);
     // const succceeded = await login({
     await login({
       email: data.email,
@@ -90,7 +82,6 @@ export default function Login() {
           </div>
 
           <div className="login-fieldSets">
-            {/* <FormControl > */}
             <label className="login-label" htmlFor="password-login">
               Password
             </label>
@@ -99,12 +90,8 @@ export default function Login() {
               type="password"
               className="login-input"
               placeholder="Enter password"
-              // value={password}
-              // onChange={(e) => setPassword(e.target.value)}
               {...register("password", passwordValidate)}
             />
-            {/* </FormControl> */}
-            {/* <FormHelperText>{errors.password.message}</FormHelperText> */}
           </div>
 
           {/* <div className="login-fieldSet">
@@ -125,14 +112,6 @@ export default function Login() {
           </div> */}
 
           <div className="buttons">
-            {/* <button
-              className="login-register-btn"
-              onClick={() => navigate(APP_REGISTER_URL)}
-            >
-              Register
-              
-            </button> */}
-
             <button
               type="submit"
               className="login-submit-btn"

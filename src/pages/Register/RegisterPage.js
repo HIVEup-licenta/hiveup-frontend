@@ -3,75 +3,10 @@ import { Link } from "react-router-dom";
 import { APP_MYFEED_URL, APP_LOGIN_URL } from "../shared/constants";
 import * as React from "react";
 import { useForm } from "react-hook-form";
-// import { register } from "../shared/register";
-// import { Link as RouterLink } from "react-router-dom";
 import { useRegister } from "../../firebaseFunctions/auth";
 import "./RegisterStyle.css";
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
-import Input from "@mui/material/Input";
-import FormHelperText from "@mui/material/FormHelperText";
 import { Button } from "@chakra-ui/react";
-// import {doesEmailExists} from "../../firebaseFunctions/validators";
 
-// const getRegisterSchema = () =>
-//   Yup.object().shape({
-//     firstName: Yup.string()
-//       .min(3, "Cel putin 3 caractere")
-//       .max(25, "Cel mult 25 de caractere")
-//       .matches(
-//         /^[-a-zA-Z0-9_]+(\s+[-a-zA-Z0-9_]+)*$/,
-//         "Cel putin un caracter alfanumeric"
-//       )
-//       .required("Required"),
-//     lastName: Yup.string()
-//       .min(3, "Cel putin 3 caractere")
-//       .max(25, "Cel mult 25 de caractere")
-//       .matches(
-//         /^[-a-zA-Z0-9_]+(\s+[-a-zA-Z0-9_]+)*$/,
-//         "Cel putin un caracter alfanumeric"
-//       )
-//       .required("Required"),
-//     email: Yup.string()
-//       .email("Email invalid")
-//       .max(50, "Cel mult 50 de caractere")
-//       .required("Required"),
-//     phoneNrUser: Yup.string()
-//       .min(10, "Cel putin 10 caractere")
-//       .max(10, "Cel mult 10 de caractere")
-//       .matches(/^[0-9]*$/, "Cel putin un caracter numeric")
-//       .required("Required"),
-//     countryUser: Yup.string()
-//       .min(3, "Cel putin 3 caractere")
-//       .max(25, "Cel mult 25 de caractere")
-//       .matches(
-//         /^[-a-zA-Z0-9_]+(\s+[-a-zA-Z0-9_]+)*$/,
-//         "Cel putin un caracter alfanumeric"
-//       )
-//       .required("Required"),
-//     cityUser: Yup.string()
-//       .min(3, "Cel putin 3 caractere")
-//       .max(25, "Cel mult 25 de caractere")
-//       .matches(
-//         /^[-a-zA-Z0-9_]+(\s+[-a-zA-Z0-9_]+)*$/,
-//         "Cel putin un caracter alfanumeric"
-//       )
-//       .required("Required"),
-//     // skill: Yup.string().required("Required"),
-//     // domain: Yup.string().required("Required"),
-//     password: Yup.string().required("Required"),
-//   });
-
-// const PUBLIC_SPEAKING = "PUBLIC_SPEAKING";
-// const SOCIAL_INVOLVED = "SOCIAL_INVOLVED";
-// const HELP_THE_COMUNITY = "HELP_THE_COMUNITY";
-// const CREATIVITY = "CREATIVITY";
-// const PROGRAMMING = "PROGRAMMING";
-// const MARKETING = "MARKETING";
-// const SOCIAL = "SOCIAL";
-// const LOCAL_COMUNITY = "LOCAL_COMUNITY";
-// const ARTS = "ARTS";
-// const IT = "IT";
 export const emailValidate = {
   required: {
     value: true,

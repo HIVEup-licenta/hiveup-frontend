@@ -1,7 +1,6 @@
 .my-profile {
   display: flex;
   justify-content: center;
-  background-color: #e8e7e3;
   /* width: 1680px; */
   width: 85%;
   height: 100vh;
@@ -75,8 +74,13 @@
 .my-profile-input {
   display: flex;
   flex-direction: column;
-  width: 180px;
-  height: 30px;
+  margin-bottom: 10px;
+  width: 170px;
+  height: 40px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 5px;
 }
 
 .my-profile-select {

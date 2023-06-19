@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import DashboardLayout from "../../components/DashboardLayout/DashboardLayout";
-import { Form, Button, Row, Col } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
 import { useAuth } from "../../firebaseFunctions/auth";
 import { APP_PROTECTED_URL } from "../../pages/shared/constants";
 import { Link } from "react-router-dom";
@@ -21,10 +19,10 @@ export default function MyProfile() {
         {/* <div className="my-profile-title">My Profile</div> */}
         {/* <ProfilePicture user={user} size="md" /> */}
         <form className="my-profile-form">
-          <div className="my-profile-buttons">
+          {/* <div className="my-profile-buttons">
             <button className="my-profile-edit-button">Edit</button>
             <button className="my-profile-save-button">Save</button>
-          </div>
+          </div> */}
 
           <div className="my-profile-rows">
             <div className="my-profile-column1">
@@ -50,7 +48,7 @@ export default function MyProfile() {
                 )}
               </div>
 
-              <div className="my-profile-row">
+              {/* <div className="my-profile-row">
                 <label className="my-profile-label">Email</label>
                 {authUser && (
                   <input
@@ -59,7 +57,7 @@ export default function MyProfile() {
                     readOnly
                   />
                 )}
-              </div>
+              </div> */}
 
               <div className="my-profile-row">
                 <label className="my-profile-label">Phone Number</label>
@@ -96,6 +94,7 @@ export default function MyProfile() {
             </div>
 
             <div className="my-profile-column2">
+              {/* <ProfilePicture user={authUser.id} size="md" /> */}
               {/* <div className="my-profile-row">
                 <label className="my-profile-label">Domain of expertise</label>
                 <select className="my-profile-select"></select>
@@ -105,8 +104,6 @@ export default function MyProfile() {
                 <label className="my-profile-label">Skills</label>
                 <select className="my-profile-select"></select>
               </div> */}
-
-            
             </div>
           </div>
         </form>

@@ -5,6 +5,7 @@
   padding: 50px 20px 50px 20px;
   margin: 50px 10px 50px 20px;
   top: 50px;
+  /* bottom: 50px; */
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -48,4 +49,8 @@
   letter-spacing: 0.01em;
   font-size: 20px;
   font-weight: 400;
+}
+
+.new-post-upload{
+  margin-top: 10px;
 }
