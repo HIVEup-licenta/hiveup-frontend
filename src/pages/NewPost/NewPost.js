@@ -1,9 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./NewPostStyle.css";
 // import CreatePost from "./Posts/CreatePost";
 // import PostList from "./Posts/PostsList";
 import AddBoxIcon from "@mui/icons-material/AddBox";
-import { Textarea, Text, Input } from "@chakra-ui/react";
+import { Textarea, Text, Input, Box } from "@chakra-ui/react";
 import { useAuth } from "../../firebaseFunctions/auth";
 import { useAddPost, usePosts } from "../../firebaseFunctions/posts";
 import { useForm } from "react-hook-form";
@@ -21,9 +21,9 @@ export default function NewPost() {
   function handleAddPost(data) {
     addPost({
       uid: user.id,
-      text: data.text,
       title: data.title,
       subTitle: data.subTitle,
+      text: data.text,
       image: selectedImage,
     });
     console.log(data);
@@ -37,9 +37,6 @@ export default function NewPost() {
   return (
     <div className="new-post">
       <form onSubmit={handleSubmit(handleAddPost)}>
-        {/* <div className="new-post-container">
-          <div className="new-post-title">My feed</div>
-        </div> */}
         <div className="new-post-container">
           <div className="new-post-title">New Post</div>
           <button
@@ -53,7 +50,7 @@ export default function NewPost() {
         <label className="new-post-label">Title of your post:</label>
         <Input
           resize="none"
-          size='lg'
+          size="lg"
           mt="5"
           borderColor={"#fcba03"}
           className="new-post-add-post-input"
@@ -62,17 +59,18 @@ export default function NewPost() {
           {...register("title", { required: true })}
         />
 
-        <label className="new-post-label">Subtitle of your post:</label>
-        <Input
-          resize="none"
-          mt="5"
-          size='md'
-          borderColor={"#fcba03"}
-          className="new-post-add-post-input"
-          placeholder="Enter a subtitle..."
-          minrows={1}
-          {...register("subTitle", { required: true })}
-        />
+        
+          <label className="new-post-label">Subtitle of your post:</label>
+          <Input
+            resize="none"
+            mt="5"
+            size="md"
+            borderColor={"#fcba03"}
+            className="new-post-add-post-input"
+            placeholder="Enter a subtitle..."
+            minrows={1}
+            {...register("subTitle", { required: true })}
+          />
 
         <label className="new-post-label">Description of your post:</label>
         <Textarea
@@ -92,7 +90,6 @@ export default function NewPost() {
           accept="image/*"
           className="new-post-upload"
         /> */}
-
       </form>
     </div>
   );

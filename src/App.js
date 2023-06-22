@@ -5,6 +5,7 @@ import History from "./pages/History/History";
 import MyProfile from "./pages/MyProfile/MyProfile";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
+import StartPage from "./pages/StartPage/StartPage";
 import NewPost from "./pages/NewPost/NewPost";
 import DashboardLayout from "./components/DashboardLayout/DashboardLayout"
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -24,7 +25,7 @@ import {
 import "./index.css";
 
 export const router = createBrowserRouter([
-  { path: APP_ROOT, element: "Public Root" },
+  { path: APP_ROOT, element: <StartPage /> },
   { path: APP_LOGIN_URL, element: <Login /> },
   { path: APP_REGISTER_URL, element: <Register /> },
   {

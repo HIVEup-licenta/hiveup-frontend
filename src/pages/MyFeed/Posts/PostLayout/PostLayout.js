@@ -21,6 +21,8 @@ export default function PostLayout({ post }) {
   const { user: authUser, isLoading: authLoading } = useAuth();
   const { deletePost, isLoading: deleteLoading } = useDeletePost(id);
 
+  console.log(authUser, "..................auth");
+
   if (isLoading) return "Loading...";
 
   return (
@@ -28,7 +30,7 @@ export default function PostLayout({ post }) {
       <Box p="2" maxW="600px" textAlign="left" size="xl">
         <Box
           border="2px solid"
-          borderColor="gray.100"
+          borderColor="antiquewhite"
           borderRadius="md"
           minHeight="150px"
           minWidth="700px"
@@ -50,7 +52,7 @@ export default function PostLayout({ post }) {
             borderBottom="2px solid"
             borderColor="#fcba03"
             p="3"
-            bg="gray.50"
+            bg="antiquewhite"
           >
             <ProfilePicture user={user} size="md" />
             <Box ml="4">
@@ -67,21 +69,14 @@ export default function PostLayout({ post }) {
               </Text>
             </Box>
           </Flex>
+          <Box p="2" minHeight="100px">
           <div class="post-layout-textbox">
-            {/* <div class="post-layout-title">Card Title</div> */}
-            {/* <div class="post-layout-subtitle">
-                  This explains the card in more detail
-                </div> */}
-            {/* <div class="post-layout-bar"></div> */}
-            <div class="post-layout-description">{text}</div>
-            {/*<div class="post-layout-tagbox">
-                  <span class="post-layout-tag">HTML</span>
-                  <span class="post-layout-tag">CSS</span>
-                </div> */}
+            <Text ml='4'  class="post-layout-description">{text}</Text>
           </div>
+          </Box>
 
           <Flex p="2">
-            {!authLoading && authUser.id === uid && (
+            {!authLoading && authUser && authUser.id === uid && (
               <IconButton
                 ml="auto"
                 onClick={deletePost}

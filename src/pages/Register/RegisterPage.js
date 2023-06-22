@@ -111,158 +111,86 @@ export default function Register() {
     <div className="register-bkgWrapper">
       <div className="register-container">
         <h1 className="register-title">Register</h1>
-        {/* <form className="register-form" onSubmit={handleSubmit}> */}
         <form className="register-form" onSubmit={handleSubmit(handleRegister)}>
-         
           <div className="register-rows">
             <div className="register-column">
               <div className="register-fieldWrapper">
-                {/* <FormControl> */}
                 <label className="register-label">First Name</label>
                 <input
                   type="text"
                   className="register-input"
-                  placeholder="First name"
+                  placeholder="Enter first name"
                   {...register("fName", fNameValidate)}
-                  // onChange={(e) => setFname(e.target.value)}
                 />
-                {/* </FormControl> */}
               </div>
               <div className="register-fieldWrapper">
-                {/* <FormControl> */}
                 <label className="register-label">Last Name</label>
                 <input
                   type="text"
                   className="register-input"
-                  placeholder="Last name"
+                  placeholder="Enter last name"
                   {...register("lName", lNameValidate)}
-                  // onChange={(e) => setLname(e.target.value)}
                 />
-                {/* </FormControl> */}
               </div>
               <div className="register-fieldWrapper">
-                {/* <FormControl> */}
                 <label className="register-label">Email</label>
                 <input
                   type="email"
                   className="register-input"
                   placeholder="Enter email"
-                  // onChange={(e) => setEmail(e.target.value)}
                   {...register("email", emailValidate)}
                 />
-                {/* </FormControl> */}
               </div>
+
             </div>
 
             <div className="register-column">
-              <div className="register-fieldWrapper">
-                {/* <FormControl> */}
+            <div className="register-fieldWrapper">
                 <label className="register-label">Phone number</label>
                 <input
                   type="text"
                   className="register-input"
-                  placeholder="Phone number"
-                  // onChange={(e) => setPhoneNr(e.target.value)}
+                  placeholder="Enter phone number"
                   {...register("phoneNr", phoneNrValidate)}
                 />
-                {/* </FormControl> */}
               </div>
-
               <div className="register-fieldWrapper">
-                {/* <FormControl> */}
                 <label className="register-label">Country</label>
                 <input
                   type="text"
                   className="register-input"
                   placeholder="Country"
-                  // onChange={(e) => setCountry(e.target.value)}
                   {...register("country", countryValidate)}
                 />
-                {/* </FormControl> */}
               </div>
               <div className="register-fieldWrapper">
-                {/* <FormControl> */}
                 <label className="register-label">City</label>
                 <input
                   type="text"
                   className="register-input"
-                  placeholder="City"
-                  // onChange={(e) => setCity(e.target.value)}
+                  placeholder="Enter city"
                   {...register("city", cityValidate)}
                 />
-                {/* </FormControl> */}
               </div>
-            </div>
-            <div className="register-column">
-              {/* <div className="register-fieldWrapper">
-                <label className="register-label">Skills needed</label>
-                <select
-                  className="register-input"
-                  value={skills_needed}
-                  onChange={handleSkillChange}
-                  placeholder="Select your skill"
-                >
-                  <option value="">Select a skill</option>
-                  <option value={PUBLIC_SPEAKING}>PUBLIC SPEAKING</option>
-                  <option value={SOCIAL_INVOLVED}>SOCIAL INVOLVED</option>
-                  <option value={HELP_THE_COMUNITY}>HELP THE COMUNITY</option>
-                  <option value={CREATIVITY}>CREATIVITY</option>
-                  <option value={PROGRAMMING}>PROGRAMMING</option>
-                  <option value={MARKETING}>MARKETING</option>
-                </select>
-              </div> */}
-              {/* 
-              <div className="register-fieldWrapper">
-                <label className="register-label">Domain</label>
-                <select
-                  className="register-input"
-                  value={domain}
-                  onChange={handleDomainChange}
-                  placeholder="Select your domain"
-                >
-                  <option value="">Select a domain</option>
-                  <option value={SOCIAL}>SOCIAL</option>
-                  <option value={LOCAL_COMUNITY}>LOCAL COMUNITY</option>
-                  <option value={ARTS}>ARTS</option>
-                  <option value={IT}>IT</option>
-                  <option value={MARKETING}>MARKETING</option>
-                </select>
-              </div> */}
 
               <div className="register-fieldWrapper">
-                {/* <FormControl> */}
-                <label className="register-label">Password</label>
-                <input
-                  type="password"
-                  className="register-input"
-                  placeholder="Enter password"
-                  // onChange={(e) => setPassword(e.target.value)}
-                  {...register("password", passwordValidate)}
-                />
-                {/* </FormControl> */}
-              </div>
+              <label className="register-label">Password</label>
+              <input
+                type="password"
+                className="register-input"
+                placeholder="Enter password"
+                {...register("password", passwordValidate)}
+              />
+            </div>
             </div>
           </div>
 
-          <div className="buttons">
-            {/* <button className="login-register-btn">
-              <Link to={APP_LOGIN_URL} className="register-link">
-                Go to Login
-              </Link>
-            </button> */}
-            {/* <p className="forgot-password text-right">
-            Already registered <a href="/sign-in">sign in?</a>
-          </p> */}
-            {/* <Button
-              type="submit"
-              className="register-signup-btn"
-              colorScheme="teal"
-              isloading={isloading}
-              loadingText="Signing Up"
-            >
-              Submit
-            </Button> */}
+          {/* <div className="register-row">
             
+          </div> */}
+          
+
+          <div className="buttons">
             <button
               type="submit"
               className="register-signup-btn"
@@ -274,13 +202,9 @@ export default function Register() {
 
             <span className="login-register">
               <span className="login-register-text">
-               Already have an account?{" "}
+                Already have an account?{" "}
               </span>
-              <Link
-                as={Link}
-                to={APP_LOGIN_URL}
-                className="login-register-btn"
-              >
+              <Link as={Link} to={APP_LOGIN_URL} className="login-register-btn">
                 <span className="login-register-text">Login</span>
               </Link>{" "}
             </span>
@@ -290,5 +214,3 @@ export default function Register() {
     </div>
   );
 }
-
-// export default Register;

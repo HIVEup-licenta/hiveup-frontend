@@ -35,6 +35,9 @@ export function useAuth() {
       setLoading(false);
     }
 
+    // console.log(authUser, ".............................");
+    // console.log(authLoading, "/////////////loading");
+
     if (!authLoading) {
       if (authUser) fetchData();
       else setLoading(false); // Not signed in

@@ -21,7 +21,7 @@ export default function Footer() {
   return (
     <div className="footer-component">
       <footer className="footer">
-        <span className="footer-text">
+        {/* <span className="footer-text">
           <Button onClick={onOpen} >Contact us</Button>
         </span>
         <Modal isOpen={isOpen} onClose={onClose}  display="flex"  justifyContent="center" minHeight="200px">
@@ -30,7 +30,7 @@ export default function Footer() {
             <ModalHeader alignItems="center">How may I help you?</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
-              {/* <Lorem count={2} /> */}
+               <Lorem count={2} /> 
               <Input
               resize="none"
               size='md'
@@ -49,7 +49,7 @@ export default function Footer() {
               <Button variant="ghost">Secondary Action</Button>
             </ModalFooter>
           </ModalContent>
-        </Modal>
+        </Modal> */}
       </footer>
     </div>
   );
