@@ -13,7 +13,7 @@ export default function Header() {
       {/* <header className="header"> */}
         <span className="site-title">
           <HiveIcon className="site-title-icon" />
-          <span className="site-title-text">HIVEup</span>
+          <span className="site-title-hiveup">HIVEup</span>
         </span>
 
         <div className="log-out-component">

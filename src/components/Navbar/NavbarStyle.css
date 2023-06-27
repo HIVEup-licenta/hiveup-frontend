@@ -100,13 +100,15 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 400%;
-  height: 200%;
+  width: 460%;
   background-image:url(hive2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
   opacity: 0.3;
+  justify-content: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  margin-right: 0;
  
 }
 

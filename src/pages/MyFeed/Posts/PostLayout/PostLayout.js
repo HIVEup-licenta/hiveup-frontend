@@ -21,8 +21,6 @@ export default function PostLayout({ post }) {
   const { user: authUser, isLoading: authLoading } = useAuth();
   const { deletePost, isLoading: deleteLoading } = useDeletePost(id);
 
-  console.log(authUser, "..................auth");
-
   if (isLoading) return "Loading...";
 
   return (
@@ -35,21 +33,9 @@ export default function PostLayout({ post }) {
           minHeight="150px"
           minWidth="700px"
         >
-          {/* <div class="post-layout">
-            <div class="post-layout-column1"> */}
-          {/* <div class="post-layout-header"></div> */}
-
-          {/* <div>
-                <div class="post-layout-author">
-                  <ProfileButton user={user} />
-                </div>
-                <div class="post-layout-time">
-                  <input>{formatDistanceToNow(date)} ago</input>
-                </div>
-              </div> */}
           <Flex
             alignItems="center"
-            borderBottom="2px solid"
+            // borderBottom="2px solid"
             borderColor="#fcba03"
             p="3"
             bg="antiquewhite"

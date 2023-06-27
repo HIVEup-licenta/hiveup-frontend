@@ -31,23 +31,16 @@ export default function MyProfile() {
     // <DashboardLayout>
     <div className="my-profile">
       <div className="my-profile-container">
-        {/* <div className="my-profile-title">My Profile</div> */}
-        {/* <ProfilePicture user={user} size="md" /> */}
         <form className="my-profile-form">
-          {/* <div className="my-profile-buttons">
-            <button className="my-profile-edit-button">Edit</button>
-            <button className="my-profile-save-button">Save</button>
-          </div> */}
-
           <div className="my-profile-rows">
             <div className="my-profile-column1">
               <ProfilePicture size="2xl" user={user} />
               <div className="my-profile-row">
                 <label className="my-profile-label">On this app since: </label>
-                {authUser && (
+                {user && (
                   <input
                     className="my-profile-input-date"
-                    value={format(authUser.date, "MMMM YYY")}
+                    value={format(user.date, "MMMM YYY")}
                     readOnly
                   />
                 )}
@@ -56,12 +49,11 @@ export default function MyProfile() {
 
             <div className="my-profile-column2">
               <div className="my-profile-row">
-                {/* <Stack spacing={4}> */}
                 <label className="my-profile-label">First Name</label>
-                {authUser && (
+                {user && (
                   <input
                     className="my-profile-input"
-                    value={authUser.fName}
+                    value={user.fName}
                     readOnly
                   />
                 )}
@@ -69,32 +61,21 @@ export default function MyProfile() {
 
               <div className="my-profile-row">
                 <label className="my-profile-label">Last Name</label>
-                {authUser && (
+                {user && (
                   <input
                     className="my-profile-input"
-                    value={authUser.lName}
+                    value={user.lName}
                     readOnly
                   />
                 )}
               </div>
 
-              {/* <div className="my-profile-row">
-                <label className="my-profile-label">Email</label>
-                {authUser && (
-                  <input
-                    className="my-profile-input"
-                    value={authUser.email}
-                    readOnly
-                  />
-                )}
-              </div> */}
-
               <div className="my-profile-row">
                 <label className="my-profile-label">Phone Number</label>
-                {authUser && (
+                {user && (
                   <input
                     className="my-profile-input"
-                    value={authUser.phoneNr}
+                    value={user.phoneNr}
                     readOnly
                   />
                 )}
@@ -103,10 +84,10 @@ export default function MyProfile() {
             <div className="my-profile-column3">
               <div className="my-profile-row">
                 <label className="my-profile-label">Country</label>
-                {authUser && (
+                {user && (
                   <input
                     className="my-profile-input"
-                    value={authUser.country}
+                    value={user.country}
                     readOnly
                   />
                 )}
@@ -114,10 +95,10 @@ export default function MyProfile() {
 
               <div className="my-profile-row">
                 <label className="my-profile-label">City</label>
-                {authUser && (
+                {user && (
                   <input
                     className="my-profile-input"
-                    value={authUser.city}
+                    value={user.city}
                     readOnly
                   />
                 )}

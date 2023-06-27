@@ -26,9 +26,6 @@ export default function Navbar() {
           <div className="nav-items">
             <span className="nav-item">
               <EventNoteIcon className="nav-icon" />
-              {/* <NavLink to="/">
-                <span className="nav-text">My Feed</span>
-              </NavLink> */}
               <Link
                 as={Link}
                 to={`${APP_PROTECTED_URL}/myFeed`}
@@ -39,9 +36,6 @@ export default function Navbar() {
 
             <span className="nav-item">
               <AccountBoxIcon className="nav-icon" />
-              {/* <NavLink to="/myprofile">
-                  <span className="nav-text">My Profile</span>
-                </NavLink> */}
               {user && (
                 <Link
                   as={Link}
@@ -54,9 +48,6 @@ export default function Navbar() {
 
             <span className="nav-item">
               <FeedIcon className="nav-icon" />
-              {/* <NavLink to="/history">
-                <span className="nav-text">History</span>
-              </NavLink> */}
                {user && (
                 <Link
                   as={Link}
@@ -69,9 +60,6 @@ export default function Navbar() {
 
             <span className="nav-item">
               <AddBoxIcon className="nav-icon" />
-              {/* <NavLink to="/history">
-                <span className="nav-text">History</span>
-              </NavLink> */}
                {user && (
                 <Link
                   as={Link}
@@ -83,9 +71,6 @@ export default function Navbar() {
             </span>
           </div>
         </div>
-        {/* <span className="nav-art">
-          <div className="background"></div>
-        </span> */}
         <div className="background"></div>
       </div>
     </>

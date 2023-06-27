@@ -26,9 +26,7 @@
   align-items: center;
   font-size: 300%;
   padding: 8px;
-  text-decoration: none;
   align-items: center;
-  text-decoration: none;
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -36,7 +34,7 @@
   letter-spacing: 0.01em;
   cursor: pointer;
   font-weight: 300;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-decoration-color: #ffffff;
 }
 
@@ -55,7 +53,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 40px;
+  font-size: 37px;
 }
 
 .home-register {
@@ -71,7 +69,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
+  font-size: 37px;
   padding: 12px;
   font-family: "Dancing Script", cursive;
 }
@@ -89,9 +87,20 @@
   background-repeat: repeat;
 }
 
-.home-body-box{
-  background-image: url("volunteers.jpg");
+.home-body-img{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 500px);
+  /* width: 100%;  */
+  background-image: url("volunteers4.jpg");
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: contain;
+  background-position-x: center;
 }
+
 .freepik{
   display: flex;
   flex-direction: column;

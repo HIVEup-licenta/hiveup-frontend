@@ -115,7 +115,7 @@ export default function Register() {
           <div className="register-rows">
             <div className="register-column">
               <div className="register-fieldWrapper">
-                <label className="register-label">First Name</label>
+                <label className="register-label">First Name *</label>
                 <input
                   type="text"
                   className="register-input"
@@ -124,7 +124,7 @@ export default function Register() {
                 />
               </div>
               <div className="register-fieldWrapper">
-                <label className="register-label">Last Name</label>
+                <label className="register-label">Last Name *</label>
                 <input
                   type="text"
                   className="register-input"
@@ -133,20 +133,19 @@ export default function Register() {
                 />
               </div>
               <div className="register-fieldWrapper">
-                <label className="register-label">Email</label>
+                <label className="register-label">Password *</label>
                 <input
-                  type="email"
+                  type="password"
                   className="register-input"
-                  placeholder="Enter email"
-                  {...register("email", emailValidate)}
+                  placeholder="Enter password"
+                  {...register("password", passwordValidate)}
                 />
               </div>
-
             </div>
 
             <div className="register-column">
-            <div className="register-fieldWrapper">
-                <label className="register-label">Phone number</label>
+              <div className="register-fieldWrapper">
+                <label className="register-label">Phone number *</label>
                 <input
                   type="text"
                   className="register-input"
@@ -155,16 +154,16 @@ export default function Register() {
                 />
               </div>
               <div className="register-fieldWrapper">
-                <label className="register-label">Country</label>
+                <label className="register-label">Country *</label>
                 <input
                   type="text"
                   className="register-input"
-                  placeholder="Country"
+                  placeholder="Enter country"
                   {...register("country", countryValidate)}
                 />
               </div>
               <div className="register-fieldWrapper">
-                <label className="register-label">City</label>
+                <label className="register-label">City *</label>
                 <input
                   type="text"
                   className="register-input"
@@ -172,23 +171,28 @@ export default function Register() {
                   {...register("city", cityValidate)}
                 />
               </div>
-
-              <div className="register-fieldWrapper">
-              <label className="register-label">Password</label>
-              <input
-                type="password"
-                className="register-input"
-                placeholder="Enter password"
-                {...register("password", passwordValidate)}
-              />
-            </div>
             </div>
           </div>
 
-          {/* <div className="register-row">
-            
-          </div> */}
-          
+          <div className="password-register">
+            <div className="password-field">
+              {/* <label className="register-label-password">Password *</label>
+              <input
+                type="password"
+                className="register-input-password"
+                placeholder="Enter password"
+                {...register("password", passwordValidate)}
+              /> */}
+              <label className="register-label-email">Email *</label>
+                <input
+                  type="email"
+                  className="register-input-email"
+                  placeholder="Enter email"
+                  {...register("email", emailValidate)}
+                />
+
+            </div>
+          </div>
 
           <div className="buttons">
             <button

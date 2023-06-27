@@ -76,6 +76,8 @@ export default function NewPost() {
         <Textarea
           resize="none"
           mt="2"
+          size="lg"
+          height="80px"
           borderColor={"#fcba03"}
           className="new-post-add-post-input"
           placeholder="Enter a description..."
