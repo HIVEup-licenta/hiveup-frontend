@@ -46,21 +46,6 @@ export function useAddPost() {
   return { addPost, isLoading };
 }
 
-export function useToggleLike({ id, isLiked, uid }) {
-  const [isLoading, setLoading] = useState(false);
-
-  async function toggleLike() {
-    setLoading(true);
-    const docRef = doc(db, "posts", id);
-    await updateDoc(docRef, {
-      likes: isLiked ? arrayRemove(uid) : arrayUnion(uid),
-    });
-    setLoading(false);
-  }
-
-  return { toggleLike, isLoading };
-}
-
 export function useDeletePost(id) {
   const [isLoading, setLoading] = useState(false);
   const toast = useToast();
@@ -70,14 +55,7 @@ export function useDeletePost(id) {
 
     if (res) {
       setLoading(true);
-
-      // Delete post document
       await deleteDoc(doc(db, "posts", id));
-
-      // Delete comments
-      const q = query(collection(db, "comments"), where("postID", "==", id));
-      const querySnapshot = await getDocs(q);
-      querySnapshot.forEach(async (doc) => deleteDoc(doc.ref));
 
       toast({
         title: "Post deleted!",

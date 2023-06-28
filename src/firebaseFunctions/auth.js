@@ -10,16 +10,6 @@ import { useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { setDoc, doc, getDoc } from "firebase/firestore";
 import doesEmailExists from "./validators";
-// import isUsernameExists from "utils/isUsernameExists";
-
-// import { query, collection, where, getDocs } from "firebase/firestore";
-
-// export default async function doesEmailExists(email) {
-//   //   const q = query(collection(db, "users"), where("username", "==", username));
-//   const q = query(collection(db, "users"), where("email", "==", email));
-//   const querySnapshot = await getDocs(q);
-//   return querySnapshot.size > 0;
-// }
 
 export function useAuth() {
   const [authUser, authLoading, error] = useAuthState(auth);
@@ -53,7 +43,6 @@ export function useLogin() {
   const navigate = useNavigate();
 
   async function login({ email, password, redirectTo = APP_MYFEED_URL }) {
-    // async function login({ email, password}) {
     setLoading(true);
 
     try {
@@ -83,9 +72,6 @@ export function useLogin() {
     }
     setLoading(false);
     return true;
-    // finally {
-    //   setLoading(false);
-    // }
   }
 
   return { login, isloading };
@@ -108,7 +94,6 @@ export function useRegister() {
   }) {
     setLoading(true);
 
-    //   const usernameExists = await isUsernameExists(username);
     const emailExists = await doesEmailExists(email);
 
     if (emailExists) {
@@ -121,7 +106,6 @@ export function useRegister() {
       });
       console.log("Email already exists");
       setLoading(false);
-      // return false;
     } else {
       try {
         const res = await createUserWithEmailAndPassword(auth, email, password);
@@ -133,7 +117,6 @@ export function useRegister() {
           phoneNr: phoneNr,
           country: country,
           city: city,
-          // username: username.toLowerCase(),
           avatar: "",
           date: Date.now(),
         });
@@ -185,7 +168,7 @@ export function useLogout() {
       // });
       console.log("successfully logged out");
       navigate(APP_LOGIN_URL);
-    } // else: show error [signOut() returns false if failed]
+    } 
   }
 
   return { logout, isloading };
